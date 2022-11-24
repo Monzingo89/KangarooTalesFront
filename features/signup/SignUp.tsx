@@ -91,20 +91,14 @@ export const SignUp: React.FC = () => {
 
   return (
     <SignUpWrapper>
-      <SignUpIcon title="It's free! :D">
+      <SignUpIcon>
         <SentimentVerySatisfied />
       </SignUpIcon>
       <Typography component="h1" variant="h5">
         Sign Up
       </Typography>
       <div style={{ textAlign: 'center', marginTop: '10px' }}>
-        <em>
-          This form is disabled for now during the beta -- just{' '}
-          <Link href="/login" variant="body2">
-            log in
-          </Link>{' '}
-          to the site using your existing MTG CB account.
-        </em>
+        <span>This form doesnt work yet</span>
       </div>
       <Formik
         initialValues={{ username: '', email: '', password: '', passwordConfirmation: '' }}

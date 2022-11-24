@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             <MenuIcon />
           </HeaderSidenavButton>
           <HeaderTitle component="h1" variant="h6" color="inherit" noWrap>
-            MTG Collection Builder
+            Kangaroo Tales Headquarters
           </HeaderTitle>
           <IconButton color="inherit" aria-controls="account-menu" aria-haspopup="true" onClick={handleAccountMenuOpen}>
             <AccountCircleIcon />
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
             <MenuIcon />
           </HeaderSidenavButton>
           <HeaderTitle component="h1" variant="h6" color="inherit" noWrap>
-            MTG Collection Builder
+            Kangaroo Tales Headquarters
           </HeaderTitle>
           <IconButton color="inherit" aria-controls="account-menu" aria-haspopup="true" onClick={handleAccountMenuOpen}>
             <AccountCircleIcon />

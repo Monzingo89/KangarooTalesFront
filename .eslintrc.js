@@ -84,6 +84,7 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 140,
+        endOfLine: 'auto',
       },
     ],
     'jsx-a11y/href-no-hash': 'off',

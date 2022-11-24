@@ -20,22 +20,6 @@ const MtgCbWebApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     }
   }, []);
 
-  if (process.browser) {
-    console.log(
-      `%c
-      ███╗   ███╗████████╗ ██████╗      ██████╗██████╗ 
-      ████╗ ████║╚══██╔══╝██╔════╝     ██╔════╝██╔══██╗
-      ██╔████╔██║   ██║   ██║  ███╗    ██║     ██████╔╝
-      ██║╚██╔╝██║   ██║   ██║   ██║    ██║     ██╔══██╗
-      ██║ ╚═╝ ██║   ██║   ╚██████╔╝    ╚██████╗██████╔╝
-      ╚═╝     ╚═╝   ╚═╝    ╚═════╝      ╚═════╝╚═════╝     
-Hello fellow dev! Feel free to check out MTG CB on GitHub. :)
-         https://github.com/brianchuchua/mtgcb-web         
-`,
-      'font-family:monospace;color:#1976d2;font-size:12px;'
-    );
-  }
-
   return (
     <MuiThemeProvider theme={darkTheme}>
       <SnackbarProvider maxSnack={3}>

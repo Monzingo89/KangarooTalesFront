@@ -187,8 +187,6 @@ export const Login: React.FC = () => {
               <Grid item xs>
                 <Link href="#" variant="body2">
                   Forgot password?
-                  <br />
-                  (In Progress)
                 </Link>
               </Grid>
               <Grid item>

@@ -2,13 +2,10 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import BarChartIcon from '@material-ui/icons/BarChart';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import HomeIcon from '@material-ui/icons/Home';
 import LibraryIcon from '@material-ui/icons/ImportContacts';
 import IsoIcon from '@material-ui/icons/Iso';
-import ListAltIcon from '@material-ui/icons/ListAlt';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useAuthentication } from '../../auth/AuthenticationProvider';
@@ -49,7 +46,7 @@ const SidenavItems: React.FC<SidenavItemsProps> = ({ handleSidenavClose = null }
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary="Browse" />
+        <ListItemText primary="Browse (DB Not Connected Yet)" />
       </ListItem>
       {isAuthenticated && (
         <ListItem
@@ -83,7 +80,7 @@ const SidenavItems: React.FC<SidenavItemsProps> = ({ handleSidenavClose = null }
           </ListItem>
         </List>
       )}
-      <ListItem button>
+      {/* <ListItem button>
         <ListItemIcon>
           <BarChartIcon />
         </ListItemIcon>
@@ -107,7 +104,7 @@ const SidenavItems: React.FC<SidenavItemsProps> = ({ handleSidenavClose = null }
           <ListAltIcon />
         </ListItemIcon>
         <ListItemText primary="Changelog" />
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 };
