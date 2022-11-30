@@ -1,8 +1,8 @@
-import Chip from '@material-ui/core/Chip';
-import TextField from '@material-ui/core/TextField';
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import Autocomplete from '@mui/lab/Autocomplete';
+import Chip from '@mui/material/Chip';
+import TextField from '@mui/material/TextField';
+import Tooltip from '@mui/material/Tooltip';
+import Zoom from '@mui/material/Zoom';
 
 interface AutocompleteOption {
   category: string;
@@ -30,8 +30,7 @@ const AutocompleteWithNegation: React.FC<AutocompleteWithNegationProps> = ({
     autoComplete
     options={options}
     groupBy={(option) => option.category}
-    getOptionLabel={(option) => option.label}
-    getOptionSelected={(option, value) => option.value === value.value}
+    isOptionEqualToValue={(option, value) => option.value === value.value}
     renderInput={(params) => <TextField {...params} label={label} variant="outlined" />}
     onChange={(e, newSelectedOptions: AutocompleteOption[]) => {
       setSelectedOptionsRemotely(newSelectedOptions);

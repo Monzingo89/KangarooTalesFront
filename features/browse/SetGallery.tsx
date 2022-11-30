@@ -1,6 +1,6 @@
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Skeleton from '@material-ui/lab/Skeleton';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
 import { Dispatch, SetStateAction, useState } from 'react';
 import styled from 'styled-components';
 import { PriceTypes } from './browseSlice';
@@ -28,31 +28,29 @@ const SetGallery: React.FC<SetGalleryProps> = ({
   const atLeastOneSetToShow = totalResults > 0;
 
   if (isLoading || isFetching) {
-    return (
-      <>
-        <GalleryControls
-          items={sets}
-          first={first}
-          page={page}
-          setCardsPerRow={setSetsPerRow}
-          setFirst={setFirst}
-          setGalleryWidth={setGalleryWidth}
-          setPage={setPage}
-          setSkip={setSkip}
-          skip={skip}
-          totalResults={totalResults}
-          cardsPerRow={setsPerRow}
-          galleryType="sets"
-          isLoading={isLoading}
-          isFetching={isFetching}
-        />{' '}
-        <SetGalleryWrapper setsPerRow={setsPerRow} galleryWidth={galleryWidth}>
-          {Array.from({ length: first }, (_, i) => (
-            <Skeleton key={i} variant="rect" height={userId ? 500 : 422} animation="wave" />
-          ))}
-        </SetGalleryWrapper>
-      </>
-    );
+    return <>
+      <GalleryControls
+        items={sets}
+        first={first}
+        page={page}
+        setCardsPerRow={setSetsPerRow}
+        setFirst={setFirst}
+        setGalleryWidth={setGalleryWidth}
+        setPage={setPage}
+        setSkip={setSkip}
+        skip={skip}
+        totalResults={totalResults}
+        cardsPerRow={setsPerRow}
+        galleryType="sets"
+        isLoading={isLoading}
+        isFetching={isFetching}
+      />{' '}
+      <SetGalleryWrapper setsPerRow={setsPerRow} galleryWidth={galleryWidth}>
+        {Array.from({ length: first }, (_, i) => (
+          <Skeleton key={i} variant="rectangular" height={userId ? 500 : 422} animation="wave" />
+        ))}
+      </SetGalleryWrapper>
+    </>;
   }
   return atLeastOneSetToShow ? (
     <>
@@ -108,7 +106,7 @@ const SetGallery: React.FC<SetGalleryProps> = ({
       </div>
     </>
   ) : (
-    <Grid container alignItems="center" justify="center">
+    <Grid container alignItems="center" justifyContent="center">
       <Grid item>
         <Typography variant="h6">No results found -- try another search!</Typography>
       </Grid>

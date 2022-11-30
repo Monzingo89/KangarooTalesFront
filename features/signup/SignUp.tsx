@@ -1,10 +1,10 @@
-import Avatar from '@material-ui/core/Avatar';
-import Box from '@material-ui/core/Box';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
-import SentimentVerySatisfied from '@material-ui/icons/SentimentVerySatisfied';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import FormHelperText from '@mui/material/FormHelperText';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import SentimentVerySatisfied from '@mui/icons-material/SentimentVerySatisfied';
 import { Field, Form, Formik } from 'formik';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
@@ -209,7 +209,7 @@ export const SignUp: React.FC = () => {
                 Sign Up
               </Button>
             </SubmitButtonWrapper>
-            <Grid container justify="flex-end">
+            <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="/login" variant="body2">
                   Already have an account? Log In

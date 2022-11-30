@@ -1,19 +1,19 @@
-import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/core/styles';
-import NextDocument, { DocumentContext, DocumentInitialProps } from 'next/document';
+import { ServerStyleSheets } from '@mui/styles';
+import { DocumentContext, DocumentInitialProps } from 'next/document';
 import React from 'react';
-import { ServerStyleSheet as StyledComponentSheets } from 'styled-components';
+import { StyleSheetManager } from 'styled-components';
 
-export default class Document extends NextDocument {
+export default class Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const styledComponentSheet = new StyledComponentSheets();
-    const materialUiSheets = new MaterialUiServerStyleSheets();
+    const styledComponentSheet = new StyleSheetManager(null);
+    const materialUiSheets = new ServerStyleSheets();
     const originalRenderPage = ctx.renderPage;
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) => styledComponentSheet.collectStyles(materialUiSheets.collect(<App {...props} />)),
         });
-      const initialProps = await NextDocument.getInitialProps(ctx);
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: [

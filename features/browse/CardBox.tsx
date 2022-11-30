@@ -1,5 +1,5 @@
-import Grid from '@material-ui/core/Grid';
-import Skeleton from '@material-ui/lab/Skeleton';
+import Grid from '@mui/material/Grid';
+import Skeleton from '@mui/material/Skeleton';
 import { useRef, useState } from 'react';
 import LazyLoad from 'react-lazyload';
 import styled from 'styled-components';
@@ -50,7 +50,7 @@ const CardBox: React.FC<CardBoxProps> = ({
           <LazyLoad key={`lazy-${card.id}`} once resize style={{ width: '100%' }}>
             {!imageLoaded && (
               <Skeleton
-                variant="rect"
+                variant="rectangular"
                 width="100%"
                 height={fixedHeight || `${computedHeight}px`}
                 animation="wave"

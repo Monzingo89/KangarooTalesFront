@@ -1,11 +1,10 @@
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import FormControl from '@material-ui/core/FormControl';
-import MenuItem from '@material-ui/core/MenuItem';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import Select from '@material-ui/core/Select';
-import AddCircleIcon from '@material-ui/icons/AddBox';
-import RemoveIcon from '@material-ui/icons/IndeterminateCheckBox';
+/* eslint-disable react/jsx-no-undef */
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import FormControl from '@mui/material/FormControl';
+import MenuItem from '@mui/material/MenuItem';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Select from '@mui/material/Select';
 import styled from 'styled-components';
 import { ColorTypes, SearchAttribute, searchAttributeOptions, SearchComparators } from '../../features/browse/browseSlice';
 
@@ -48,7 +47,7 @@ const CardStatSearch: React.FC<CardStatSearchProps> = ({
           <CardStatAttributeSelect
             value={cardStatSearch.searchAttribute}
             defaultValue="convertedManaCost"
-            onChange={(event) => handleSearchAttributeChange(event, index)}
+            onChange={(event: any) => handleSearchAttributeChange(event, index)}
             variant="outlined"
           >
             {searchAttributesToUse.map((searchAttribute) => (
@@ -60,7 +59,7 @@ const CardStatSearch: React.FC<CardStatSearchProps> = ({
           <CardStatComparatorSelect
             value={cardStatSearch.comparator}
             defaultValue=">="
-            onChange={(event) => handleComparatorChange(event, index)}
+            // onChange={(event) => handleComparatorChange(event, index)}
             variant="outlined"
           >
             <MenuItem value="gte">{'>='}</MenuItem>
@@ -84,10 +83,10 @@ const CardStatSearch: React.FC<CardStatSearchProps> = ({
           <em>Add or remove card attributes:</em>
         </CardStatAttributeAdderInstructions>
         <Button size="small" onClick={handleRemoveCardStatSearch}>
-          <RemoveIcon />
+          {/* <RemoveIcon /> */}
         </Button>
         <Button size="small" onClick={handleAddCardStatSearch}>
-          <AddCircleIcon />
+          {/* <AddCircleIcon /> */}
         </Button>
       </CardStatAttributeAdderButtonGroup>
     </CardStatSearchGroup>

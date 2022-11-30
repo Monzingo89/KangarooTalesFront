@@ -1,5 +1,5 @@
-import MuiButton, { ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import MuiButton, { ButtonProps as MuiButtonProps } from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
 import styled from 'styled-components';
 
 const ButtonWrapper = styled.div({

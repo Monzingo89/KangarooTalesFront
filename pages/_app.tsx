@@ -1,16 +1,21 @@
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { StylesProvider, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { Snackbar } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import { StyledEngineProvider, Theme, ThemeProvider } from '@mui/material/styles';
+import '@mui/styles';
+import StylesProvider from '@mui/styles/StylesProvider';
 import 'fontsource-roboto';
 import { AppProps } from 'next/app';
-import { SnackbarProvider } from 'notistack';
 import { useEffect } from 'react';
-import { Provider as ReduxProvider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
 import { AuthenticationProvider } from '../auth/AuthenticationProvider';
 import Layout from '../components/layout/Layout';
 import GlobalStyle from '../components/styles/GlobalStyle';
 import store from '../redux/store';
 import darkTheme from '../themes/darkTheme';
+
+declare module '@mui/styles/defaultTheme' {
+  type DefaultTheme = Theme;
+}
 
 const MtgCbWebApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect(() => {
@@ -21,23 +26,25 @@ const MtgCbWebApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   }, []);
 
   return (
-    <MuiThemeProvider theme={darkTheme}>
-      <SnackbarProvider maxSnack={3}>
-        <StylesProvider injectFirst>
-          <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
-            <GlobalStyle />
-            <ReduxProvider store={store}>
-              <AuthenticationProvider>
-                <Layout>
-                  <Component {...pageProps} />
-                </Layout>
-              </AuthenticationProvider>
-            </ReduxProvider>
-          </ThemeProvider>
-        </StylesProvider>
-      </SnackbarProvider>
-    </MuiThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={darkTheme}>
+        <Snackbar>
+          <StylesProvider injectFirst>
+            <ThemeProvider theme={darkTheme}>
+              <CssBaseline />
+              <GlobalStyle />
+              <Provider store={store}>
+                <AuthenticationProvider>
+                  <Layout>
+                    <Component {...pageProps} />
+                  </Layout>
+                </AuthenticationProvider>
+              </Provider>
+            </ThemeProvider>
+          </StylesProvider>
+        </Snackbar>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 };
 

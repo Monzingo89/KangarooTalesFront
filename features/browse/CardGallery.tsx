@@ -1,5 +1,5 @@
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { Dispatch, SetStateAction } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useAuthentication } from '../../auth/AuthenticationProvider';
@@ -175,7 +175,7 @@ const CardGallery: React.FC<CardGalleryProps> = ({
   }
   if (!isLoading && !isFetching && totalResults === 0 && cards?.length === 0)
     return (
-      <Grid container alignItems="center" justify="center">
+      <Grid container alignItems="center" justifyContent="center">
         <Grid item>
           <Typography variant="h6">No results found -- try another search!</Typography>
         </Grid>

@@ -1,4 +1,4 @@
-import Container from '@material-ui/core/Container';
+import Container from '@mui/material/Container';
 import { privateRoute, useAuthentication } from '../auth/AuthenticationProvider';
 
 const PrivatePage: React.FC = () => {

@@ -1,10 +1,10 @@
-import Paper from '@material-ui/core/Paper';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import LibraryIcon from '@material-ui/icons/ImportContacts';
-import TableIcon from '@material-ui/icons/TableChart';
-import ImagesIcon from '@material-ui/icons/ViewComfy';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import Paper from '@mui/material/Paper';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import LibraryIcon from '@mui/icons-material/ImportContacts';
+import TableIcon from '@mui/icons-material/TableChart';
+import ImagesIcon from '@mui/icons-material/ViewComfy';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import styled from 'styled-components';
 
 interface ViewModeSelectorProps {

@@ -1,5 +1,5 @@
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 import styled from 'styled-components';
 import { sortByOptions as defaultSortByOptions } from '../../features/browse/browseSlice';
 
@@ -22,14 +22,14 @@ const SortSelector: React.FC<SortSelectorProps> = ({
 
   return (
     <StyledSortSelector>
-      <SortByOption value={sortBy} onChange={handleSortByChange} variant="outlined">
+      <SortByOption value={sortBy} variant="outlined">
         {sortByOptionsToUse?.map((sortByOption) => (
           <MenuItem key={sortByOption.label} value={sortByOption.value}>
             Sort by {sortByOption.label}
           </MenuItem>
         ))}
       </SortByOption>
-      <SortByDirection value={sortByDirection} onChange={handleSortByDirectionChange} variant="outlined">
+      <SortByDirection value={sortByDirection} variant="outlined">
         <MenuItem value="ASC">ASC</MenuItem>
         <MenuItem value="DESC">DESC</MenuItem>
       </SortByDirection>

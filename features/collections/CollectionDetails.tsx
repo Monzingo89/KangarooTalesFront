@@ -1,6 +1,6 @@
-import LinearProgress from '@material-ui/core/LinearProgress';
-import Typography from '@material-ui/core/Typography';
-import Skeleton from '@material-ui/lab/Skeleton';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
 import styled from 'styled-components';
 import { formatter } from '../browse/util/formatPrice';
 
@@ -102,7 +102,7 @@ const StyledCollectionDetailsTitleMobile = styled(CollectionDetailsTitle)(({ the
 }));
 
 const StyledCollectionDetailsTitleDesktop = styled(CollectionDetailsTitle)(({ theme }) => ({
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.down('lg')]: {
     display: 'none',
   },
 }));

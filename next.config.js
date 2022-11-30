@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // This file sets a custom webpack configuration to use your Next.js app
 // with Sentry.
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
@@ -11,8 +12,8 @@ const moduleExports = {
     return [
       {
         source: '/:path*',
-        destination: 'https://alpha.mtgcollectionbuilder.com/:path*',
-        has: [{ type: 'header', key: 'host', value: 'mtgcb-web.herokuapp.com' }],
+        destination: 'https://monzingo89.github.io/KangarooTalesFront/:path*',
+        has: [{ type: 'header', key: 'host', value: 'monzingo89.github.io' }],
         permanent: true,
       },
     ];

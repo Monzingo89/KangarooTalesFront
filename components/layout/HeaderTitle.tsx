@@ -1,4 +1,4 @@
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import styled from 'styled-components';
 
 // Reason: https://github.com/mui-org/material-ui/issues/20373

@@ -1,9 +1,9 @@
-import FormControl from '@material-ui/core/FormControl';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import InputLabel from '@material-ui/core/InputLabel';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import Tooltip from '@material-ui/core/Tooltip';
-import InfoOutlined from '@material-ui/icons/InfoOutlined';
+import FormControl from '@mui/material/FormControl';
+import InputAdornment from '@mui/material/InputAdornment';
+import InputLabel from '@mui/material/InputLabel';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Tooltip from '@mui/material/Tooltip';
+import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import styled from 'styled-components';
 
 interface OracleTextSearchProps {

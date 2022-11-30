@@ -1,4 +1,4 @@
-import Drawer from '@material-ui/core/Drawer';
+import Drawer from '@mui/material/Drawer';
 import styled from 'styled-components';
 import { drawerWidth } from './constants';
 

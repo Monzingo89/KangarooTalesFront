@@ -3,11 +3,13 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 import * as Sentry from '@sentry/nextjs';
+import { BrowserTracing } from '@sentry/tracing';
 
 const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
 
 Sentry.init({
-  dsn: SENTRY_DSN || 'https://a2ba3e6024e340f7866333e731137edf@o128795.ingest.sentry.io/6128141',
+  dsn: SENTRY_DSN || 'https://6bf80f2d983d445f8ce493f0b468af0d@o4504212443627520.ingest.sentry.io/4504212508377088',
+  integrations: [new BrowserTracing()],
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1.0,
   // ...

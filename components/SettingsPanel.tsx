@@ -1,11 +1,11 @@
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormLabel from '@material-ui/core/FormLabel';
-import IconButton from '@material-ui/core/IconButton';
-import Popover from '@material-ui/core/Popover';
-import Switch from '@material-ui/core/Switch';
-import SettingsIcon from '@material-ui/icons/Settings';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup';
+import FormLabel from '@mui/material/FormLabel';
+import IconButton from '@mui/material/IconButton';
+import Popover from '@mui/material/Popover';
+import Switch from '@mui/material/Switch';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { Dispatch, SetStateAction, useState } from 'react';
 import styled from 'styled-components';
 

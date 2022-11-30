@@ -1,5 +1,5 @@
-import Typography from '@material-ui/core/Typography';
-import { Skeleton } from '@material-ui/lab';
+import Typography from '@mui/material/Typography';
+import { Skeleton } from '@mui/material';
 import { memo, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';

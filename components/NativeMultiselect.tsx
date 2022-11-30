@@ -1,4 +1,4 @@
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 
 const NativeMultiselect: React.FC<NativeMultiselectProps> = ({ label, multiselectOptions, selectedOptions, updateSelectedOptions }) => {
   const optionsByCategory = multiselectOptions.reduce((acc, type) => {

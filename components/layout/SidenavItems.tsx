@@ -1,11 +1,12 @@
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import HomeIcon from '@material-ui/icons/Home';
-import LibraryIcon from '@material-ui/icons/ImportContacts';
-import IsoIcon from '@material-ui/icons/Iso';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeIcon from '@mui/icons-material/Home';
+import LibraryIcon from '@mui/icons-material/ImportContacts';
+import IsoIcon from '@mui/icons-material/Iso';
+import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useAuthentication } from '../../auth/AuthenticationProvider';
@@ -34,6 +35,12 @@ const SidenavItems: React.FC<SidenavItemsProps> = ({ handleSidenavClose = null }
           <HomeIcon />
         </ListItemIcon>
         <ListItemText primary="Home" />
+      </ListItem>
+      <ListItem button component={Link} href="https://monzingo89.github.io/KangarooTalesCrypt" color="inherit" target="_blank">
+        <ListItemIcon>
+          <ThunderstormIcon />
+        </ListItemIcon>
+        <ListItemText primary="Back to Crypt" />
       </ListItem>
       <ListItem
         button

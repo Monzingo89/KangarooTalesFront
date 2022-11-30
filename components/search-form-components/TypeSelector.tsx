@@ -1,4 +1,4 @@
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import isMobile from 'is-mobile';
 import styled from 'styled-components';
 import { CardType } from '../../features/browse/browseSlice';

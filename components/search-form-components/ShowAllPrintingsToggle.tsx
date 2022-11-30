@@ -1,7 +1,7 @@
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import Paper from '@material-ui/core/Paper';
-import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup';
+import Paper from '@mui/material/Paper';
+import Switch from '@mui/material/Switch';
 import styled from 'styled-components';
 
 interface ShowAllPrintingsToggleProps {

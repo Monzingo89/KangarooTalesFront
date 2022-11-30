@@ -1,5 +1,5 @@
-import LinearProgress from '@material-ui/core/LinearProgress';
-import Typography from '@material-ui/core/Typography';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
 import Link from '../../../components/Link';
 import { formatter } from '../util/formatPrice';
 import titleCase from '../util/titleCase';

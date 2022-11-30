@@ -1,7 +1,7 @@
-import Grid from '@material-ui/core/Grid';
-import Slider from '@material-ui/core/Slider';
-import Typography from '@material-ui/core/Typography';
-import Skeleton from '@material-ui/lab/Skeleton';
+import Grid from '@mui/material/Grid';
+import Slider from '@mui/material/Slider';
+import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { forceCheck as forceImagesToCheckIfTheyShouldLoad } from 'react-lazyload';
 import styled from 'styled-components';
@@ -77,75 +77,73 @@ const GalleryControls: React.FC<GalleryControlsProps> = ({
   if (isLoading) {
     return (
       <div style={{ marginTop: '10px', marginBottom: '10px' }}>
-        <Skeleton variant="rect" width="100%" height={galleryType === 'sets' ? '54px' : '108px'} />
+        <Skeleton variant="rectangular" width="100%" height={galleryType === 'sets' ? '54px' : '108px'} />
       </div>
     );
   }
 
-  return (
-    atLeastOneItemToShow && (
-      <>
-        <GalleryPaginationDesktop
-          settingGroups={settingGroups}
-          startOfRange={startOfRange}
-          endOfRange={endOfRange}
-          totalResults={totalResults}
-          typeLabel={typeLabel}
-          galleryType={galleryType}
-          page={page}
-          first={first}
-          setFirst={setFirst}
-          setPage={setPage}
-          setSkip={setSkip}
-          isOnBottom={isOnBottom}
-          isFetching={isFetching}
-        />
-        <GalleryPaginationMobile
-          settingGroups={settingGroups}
-          startOfRange={startOfRange}
-          endOfRange={endOfRange}
-          totalResults={totalResults}
-          typeLabel={typeLabel}
-          galleryType={galleryType}
-          page={page}
-          first={first}
-          setFirst={setFirst}
-          setPage={setPage}
-          setSkip={setSkip}
-          isOnBottom={isOnBottom}
-          isFetching={isFetching}
-        />
-        {setGalleryWidth && setCardsPerRow && width >= breakpoints.sm && galleryType === 'cards' && !isOnBottom && (
-          <Grid container item sm={12} spacing={2} justify="space-between" alignItems="center">
-            <Grid item sm={6}>
-              <Typography id="card-size-slider">Card size</Typography>
-              <Slider
-                defaultValue={galleryWidth}
-                aria-labelledby="card-size-slider"
-                valueLabelDisplay="auto"
-                step={5}
-                min={0}
-                max={100}
-                onChange={(e, value: number) => handleGalleryWidthChange(value, setGalleryWidth)}
-              />
-            </Grid>
-            <Grid item sm={6}>
-              <Typography id="cards-per-row-slider">Cards per row</Typography>
-              <Slider
-                defaultValue={cardsPerRow}
-                aria-labelledby="cards-per-row-slider"
-                valueLabelDisplay="auto"
-                step={1}
-                marks
-                min={1}
-                max={9}
-                onChange={(e, value: number) => handleCardsPerRowChange(value, setCardsPerRow)}
-              />
-            </Grid>
+  return atLeastOneItemToShow && (
+    <>
+      <GalleryPaginationDesktop
+        settingGroups={settingGroups}
+        startOfRange={startOfRange}
+        endOfRange={endOfRange}
+        totalResults={totalResults}
+        typeLabel={typeLabel}
+        galleryType={galleryType}
+        page={page}
+        first={first}
+        setFirst={setFirst}
+        setPage={setPage}
+        setSkip={setSkip}
+        isOnBottom={isOnBottom}
+        isFetching={isFetching}
+      />
+      <GalleryPaginationMobile
+        settingGroups={settingGroups}
+        startOfRange={startOfRange}
+        endOfRange={endOfRange}
+        totalResults={totalResults}
+        typeLabel={typeLabel}
+        galleryType={galleryType}
+        page={page}
+        first={first}
+        setFirst={setFirst}
+        setPage={setPage}
+        setSkip={setSkip}
+        isOnBottom={isOnBottom}
+        isFetching={isFetching}
+      />
+      {setGalleryWidth && setCardsPerRow && width >= breakpoints.sm && galleryType === 'cards' && !isOnBottom && (
+        <Grid container item sm={12} spacing={2} justifyContent="space-between" alignItems="center">
+          <Grid item sm={6}>
+            <Typography id="card-size-slider">Card size</Typography>
+            <Slider
+              defaultValue={galleryWidth}
+              aria-labelledby="card-size-slider"
+              valueLabelDisplay="auto"
+              step={5}
+              min={0}
+              max={100}
+              onChange={(e, value: number) => handleGalleryWidthChange(value, setGalleryWidth)}
+            />
           </Grid>
-        )}
-      </>
-    )
+          <Grid item sm={6}>
+            <Typography id="cards-per-row-slider">Cards per row</Typography>
+            <Slider
+              defaultValue={cardsPerRow}
+              aria-labelledby="cards-per-row-slider"
+              valueLabelDisplay="auto"
+              step={1}
+              marks
+              min={1}
+              max={9}
+              onChange={(e, value: number) => handleCardsPerRowChange(value, setCardsPerRow)}
+            />
+          </Grid>
+        </Grid>
+      )}
+    </>
   );
 };
 
@@ -269,7 +267,7 @@ const GalleryPaginationDesktop: React.FC<GalleryPaginationDesktopProps> = ({
 };
 
 const StyledDesktopOnlyGrid = styled(Grid)(({ theme }) => ({
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.down('lg')]: {
     display: 'none',
   },
 }));
@@ -357,14 +355,14 @@ const StyledMobileOnlyGrid = styled(Grid)(({ theme }) => ({
 
 const StyledGridCenteredIfSmall = styled(Grid)(({ theme }) => ({
   textAlign: 'left',
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
   },
 }));
 
 const StyledGridLeftAlignedIfSmall = styled(Grid)(({ theme }) => ({
   textAlign: 'center',
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     textAlign: 'left',
   },
 }));

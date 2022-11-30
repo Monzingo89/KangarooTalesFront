@@ -1,6 +1,6 @@
-import MenuItem from '@material-ui/core/MenuItem';
-import Paper from '@material-ui/core/Paper';
-import Select from '@material-ui/core/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Paper from '@mui/material/Paper';
+import Select from '@mui/material/Select';
 import styled from 'styled-components';
 import { CardColors, ColorTypes } from '../../features/browse/browseSlice';
 import {
@@ -38,7 +38,7 @@ const ColorSelector: React.FC<ColorSelectorProps> = ({ cardColors, updateCardCol
         <ColorlessManaButton toggled={cardColors.colorless} handleClick={() => handleManaButtonClick('colorless')} />
       </ColorSelect>
       <ColorTypeSelect>
-        <Select value={cardColors.type} onChange={handleColorTypeChange} variant="outlined" style={{ width: '100%' }}>
+        <Select value={cardColors.type} style={{ width: '100%' }}>
           <MenuItem value="at-least-these-colors">At Least These Colors</MenuItem>
           <MenuItem value="only-these-colors">Only These Colors</MenuItem>
           <MenuItem value="at-most-these-colors">At Most These Colors</MenuItem>

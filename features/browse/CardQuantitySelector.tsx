@@ -1,7 +1,7 @@
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CircularProgress from '@mui/material/CircularProgress';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
 import { useUpdateCollectionLegacyMutation } from '../../network/services/mtgcbApi';

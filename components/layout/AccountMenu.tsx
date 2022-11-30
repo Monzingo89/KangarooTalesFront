@@ -1,5 +1,5 @@
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import { useAuthentication } from '../../auth/AuthenticationProvider';
 import Link from '../Link';
 
@@ -13,7 +13,6 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ anchorEl, handleClose }) => {
     <Menu
       id="account-menu"
       anchorEl={anchorEl}
-      getContentAnchorEl={null}
       anchorOrigin={{
         vertical: 'bottom',
         horizontal: 'center',

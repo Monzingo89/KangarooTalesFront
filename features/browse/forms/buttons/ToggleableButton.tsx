@@ -1,5 +1,5 @@
 import StyledComponents from 'styled-components';
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 
 export interface ToggleButtonProps {
   size?: 'small' | 'medium';

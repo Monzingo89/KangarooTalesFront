@@ -1,7 +1,7 @@
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import Autocomplete from '@mui/material/Autocomplete';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -127,7 +127,7 @@ const EditCards: React.FC = () => {
       <Typography variant="h4" component="h1" align="center">
         Edit Cards
       </Typography>
-      <Grid container justify="center" style={{ marginTop: '10px' }} spacing={0}>
+      <Grid container justifyContent="center" style={{ marginTop: '10px' }} spacing={0}>
         <Grid item xs={12} sm={12} md={6} lg={4}>
           <Autocomplete
             renderInput={(params) => (
@@ -154,7 +154,7 @@ const EditCards: React.FC = () => {
           />
         </Grid>
       </Grid>
-      <Grid container justify="center" style={{ marginTop: '10px' }}>
+      <Grid container justifyContent="center" style={{ marginTop: '10px' }}>
         {selectedCard && (
           <>
             <Grid item xs={12}>

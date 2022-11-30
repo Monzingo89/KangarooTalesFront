@@ -1,4 +1,4 @@
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import { ResponsiveContainer } from '../components/layout/ResponsiveContainer';
 import Link from '../components/Link';
 import CollapsibleTable from '../components/shared/CollapsibleTable';

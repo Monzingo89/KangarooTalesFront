@@ -1,4 +1,4 @@
-import MuiPagination from '@material-ui/lab/Pagination';
+import MuiPagination from '@mui/material/Pagination';
 import { Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 import breakpoints from '../themes/breakpoints';
